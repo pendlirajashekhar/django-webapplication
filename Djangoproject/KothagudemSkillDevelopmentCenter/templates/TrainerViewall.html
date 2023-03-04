@@ -1,0 +1,61 @@
+{% load static %}
+<html>
+    <head><title>View All</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+    <body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'trainerhome' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+           
+    </div>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <h1 class="display-3">View All</h1>
+        
+    </div>
+    </div>
+    <div class="container text-center">
+        <h1>Show Trainer Details</h1>
+    </div>
+    <table class="table table-warning table-striped table-hover">
+        <tr>
+        <th>S/No</th>
+        <th>name</th>
+        <th>Email</th>
+        <th>number</th>
+        <th>passowrd</th>
+        <th>Gender</th>
+        <th>Delete</th>
+        </tr>
+        {% for detail in Details %}
+            
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{detail.name}}</td>
+                <td>{{detail.email}}</td>
+                <td>{{detail.number}}</td>
+                <td>{{detail.password}}</td>
+                <td>{{detail.Gender}}</td>
+                <td><a href="">Del</a></td>               
+                
+            </tr>          
+            {%  endfor %}
+       
+    </table>
+
+       <footer class="fixed-bottom">
+        <div class =" bg-dark text-white text-center">
+            <p>copy rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+        </div>
+       </footer> 
+    </body>
+</html>

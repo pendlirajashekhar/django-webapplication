@@ -1,0 +1,113 @@
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+        
+    <link rel="stylesheet" href="{%  static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</head>
+    <body> 
+        
+       <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+           <a class="navbar-brand" href="#">Kothagudam skill development center</a>
+           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+               aria-expanded="false" aria-label="Toggle navigation"></button>
+           <div class="collapse navbar-collapse" id="collapsibleNavId">
+               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  
+                  
+               
+              
+           </div>
+       </nav>
+       <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-3">Admin Home</h1>
+        </div>
+       </div>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card bg-dark text-White text-center ">
+      <div class="card-body">
+       <a href="{% url 'adminprofile' %}"><h3>Profile</h3></a>
+       
+      </div>
+    </div> 
+  </div>
+  <div class="col-sm-3">
+    <div class="card bg-dark text-White text-center">
+      <div class="card-body">
+      <a href="{% url 'adminviewall'%}"> <h3 class="card-title">viewall</h3></a>
+     
+      </div>
+    </div>
+  </div>
+
+ <div class="col-sm-3">
+      <div class="card bg-dark text-White text-center">
+        <div class="card-body">
+      <a href="{% url 'admineventadd' %}"><h3 class="card-title">Event add</h3>
+         
+        </div>
+      </div>
+    </div>
+    
+        <div class="col-sm-3">
+          <div class="card bg-dark text-White text-center">
+            <div class="card-body">
+            <a href="{% url 'adminapprover' %}"> <h3 class="card-title">Approver</h3></a>
+             
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="card text-center">
+            <div class="card-body">
+            
+          
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+            Logout
+          </button>
+          
+          
+          
+          <!-- Modal -->
+         <div class="text-center">
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">logout confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <p>are you sure want to logout</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                  <a href=../><button type="button" class="btn btn-primary">yes</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+   </div>
+   </div>
+   </div>
+      
+         
+           
+        <footer class="fixed-bottom">
+          <div class="bg-dark text-white text-center">
+              <p>copy Rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+          </div>
+      </footer>
+      
+    </body>
+</html>

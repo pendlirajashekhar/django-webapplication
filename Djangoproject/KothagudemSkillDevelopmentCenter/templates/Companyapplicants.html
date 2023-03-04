@@ -1,0 +1,67 @@
+{% load static %}
+<html>
+    <head><title>Applicants</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" herf=" {% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Kothagudem skill development center</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'CompanyHome' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h1 class="display-3">Applicants</h1>
+                
+            </div>
+        </div>
+
+        <table class="table table-warning table-border table-striped  table-hover ">
+            <tr class="thead-dark">
+                <th>S/no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>number</th>
+                <th>Adderess</th>
+                <th>Gender</th>
+                <th>Aceept</th>
+                <th>Reject</th>
+            </tr>
+          
+            
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="">accept</a></td> 
+                <td><a href="">Reject</a></td> 
+                              
+
+                
+            </tr>          
+            
+                 </table>
+        <footer class="fixed-bottom">
+            <div class="bg-dark text-white text-center">
+                <p>copy Rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+            </div>
+        </footer>
+       
+        
+
+    </body>
+</html>

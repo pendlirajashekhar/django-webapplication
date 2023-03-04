@@ -1,0 +1,99 @@
+{% load static %}
+<html>
+    <head><title>Add details</title>
+        <link rel="stylesheet" herf="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Kothagudem skill development center</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'trainerhome' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                   
+            </div>
+        </nav>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <h1 class="display-3">credits</h1>
+       
+    </div>
+</div>
+<div class=" container fluid">
+    <div class="row">
+        <div  class="col-sm-4"></div>
+        <div class ="col-sm-4">
+           <form action="{%url 'trainercredits'%}" method="post"> <div class="form-group">
+            {% csrf_token %}
+            
+            
+              <label for="">Title</label>
+              <select class="form-control" name="title1" id="">
+                {% for a in creditz %}
+                <option value={{a.Title}}>{{a.Title}}</option>
+                {% endfor %}
+              </select>
+              <label for="">Trainer Name</label>
+              <select class="form-control" name="tname" id="">
+                {% for a in creditz %}
+                <option value={{a.TrainerName}}>{{a.TrainerName}}</option>
+                {% endfor %}
+              </select>
+              <label for="">Requirement</label>
+              <select class="form-control" name="require" id="">
+                {% for a in creditz %}
+                <option value={{a.Requirement}}>{{a.Requirement}}</option>
+                {% endfor %}
+              </select>
+              
+              
+              <label for="">Student Credits</label>
+              <textarea name="tdetials" id="" class="form-control" placeholder="" aria-describedby="helpId"> </textarea>
+              
+           <button type="Submit">submit</button> </div>
+           </form>
+        </div>
+
+        <div class ="col-sm-4"></div>
+    </div>
+    </div>
+    <div class="container text-center">
+        <h1>Add Details</h1>
+    </div>
+    <table class="table table-warning table-striped table-hover">
+        <tr>
+        <th>S/No</th>
+        <th>Trainer Id</th>
+        <th>Trainer Name</th>
+        <th>Trainer Details</th>
+        <th>Student Credits</th>
+        <th>Requirement</th>
+        <th>Title</th><td>
+        </tr>
+        {% for detail in creditz %}
+            
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{detail.id}}</td>
+                 <td>{{detail.TrainerName}}</td>
+                <td>{{detail.TrainerDetails}}</td>
+                <td>{{details.StudentCredits}}</td>
+                <td>{{detail.Requirement}}</td>
+                <td>{{detail.Title}}</td>         
+                
+            </tr>          
+            {%  endfor %}
+        
+    </table>
+<footer class="">
+    <div class="bg-dark text-white text-center">
+        <p>copy Rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+    </div>
+</footer>
+        
+    </body>
+</html>

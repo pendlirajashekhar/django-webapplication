@@ -1,0 +1,119 @@
+{%load static%}
+<html>
+    <head>
+        <title>home</title>
+        
+  <link rel="stylesheet" href="{%static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}" />
+</head>
+    <body> 
+        
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Kothagudem Skill Development center</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="admin">Admin <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="student">Student<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="trainer">trainer <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="company">Company <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'Contact' %}">Contact<span class="sr-only">(current)</span></a>
+                </li>
+               
+                 
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" id="Top">
+        <div class="container text-center">
+           <h1 class="display-3">home</h1>
+           
+        </div></div>
+ <img src=" {% static 'img/skill.jpg'  %}" style="width: 1500px;height:200px"><br>
+
+ <div class="row">
+    <div class="col-sm-3">
+      <div class="card bg-danger" style="margin:20px">
+        <div class="card-body">
+       <a href="admin">  <h3 class="card-title">Admin</h3> </a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card bg-danger" style="margin:20px">
+        <div class="card-body">
+         <a href="student"> <h3 class="card-title">Student</h3></a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card bg-danger" style="margin:20px">
+        <div class="card-body">
+       <a href="trainer"> <h3 class="card-title">Trainer</h3></a>
+         
+       
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card bg-danger" style="margin:20px">
+        <div class="card-body">
+        <a href="company"> <h3 class="card-title">company</h3></a>
+          
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+ <div class="container-fulid text-center bg-dark text-white">
+        <h2>Abstract</h2>
+      <p> Kothagudem Skill Development Centre (KSDC) is a skill development centre for the students in search of jobs. 
+            Due to lack of knowledge on the stream of education pursued, the government has initiated this program. 
+            This will ensure to fill the void, so that students can be placed in the working industry.To reach all the students the initiation is developed as a web-based project. The application provides the students to enroll and gain access to the available functionalities. The application includes functionalities like undergoing seminar list, placements available, courses provided for training. Upon successful completion of the training or the seminar credits are given to the students based on the performance shown during the course of time. The credits help the students to apply for the jobs and get placed by performing good during the interview process.</p>
+     </div></div>
+<div class="container-fuild text-center" >
+    <h2>Exisisting system</h2>
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{% static 'img/existing system.jpg' %}" style="width:580px;height:250px"></div>
+           <div class="col-sm-6">
+            <p>Lack of practical knowledge is the core issue for unemployment. With the increasing rate of students pursuing education, need of employment has become inevitable. But with students with lack of knowledge has become an issue in placing the student in the appropriate filed of industry. Resulting in increased percentage of unemployment. There are many work industries which are ready to recruit skilled students. Either students are not skilled or the work industry are not wide spread for people to be aware of. Recently in order to increase the placements government has initiated lot of programs but is not reached to huge population. Reach of the programs initiated by the government are limited.</p>
+        </div>
+    </div>
+    
+</div>
+<div class="container-fuild text-center">
+    <h2>Proposed system</h2>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Lot of surveys and comities are been placed to overcome the unemployment issue in the state. As with the committee placed there are lot of requirements of work force in the industry. But the recruitment is not happening as a result of lack of skills. With all the files submitted by the committee the government has initiated the Skill development program. As a pilot test the initiation is started at Kothagudam District. It is a web application with provides students to enrol in order to gain access to the information on the programs initiated around the state, seminars held and job postings. The government has realised that this program will turn successful only if the students enrolled has gained skills. By considering the same the government has introduced credit system through which students can apply to the jobs listed. Gain knowledge gain credits is the underlying theme of the application.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'img/proposed system.png' %}" style="width:580px;height:250px">
+        </div>
+    </div>
+</div><br>
+
+<button> <a href ="#Top">Top</a></button>
+<footer>
+    <div class="bg-dark text-white text-center">
+        <p>copy Rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+    </div>
+</footer>
+    
+    </body></html> 

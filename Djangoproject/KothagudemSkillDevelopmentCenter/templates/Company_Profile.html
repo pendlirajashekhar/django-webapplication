@@ -1,0 +1,84 @@
+{% load  static  %}
+<html>
+    <head><title>Profile</title>
+   <link rel="stylesheet " href="{% static 'css/bootstrap.css' %}">
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   </head>
+    <body>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Kothagudem skill devlopment center</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'CompanyHome' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                   
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h1 class="display-3">Profile</h1>
+                
+            </div>
+        </div>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-sm-4">
+    
+    
+                </div>
+                <div class="col-sm-4">
+                    
+                    <form action="{% url 'companyprofile' %}" method="post">
+                        <div class="form-group">
+                          <label for="">name</label>
+                          <input type="text" name="cnam" id="" class="form-control" value={{user.username}} placeholder="" aria-describedby="helpId" disabled >
+                          <label for="">email</label>
+                          <input type="email" name="cem" id="" class="form-control" value={{user.email}} placeholder="" aria-describedby="helpId" disabled epattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                          <label for=""> mobile number</label>
+                          <input type="number" name="cnum" id="" class="form-control" value={{user.number}} placeholder="" aria-describedby="helpId" disabled npattern="[789][0-9]{9}">
+                          <label for="">address</label>
+                          <input type="text" name="cad" id="" class="form-control" value={{user.adderss}} placeholder="" aria-describedby="helpId" disabled>
+                          <label for="">passowrd</label>
+                          <input type="password" name="cpd" id="" class="form-control"  value={{user.passsword}}placeholder="" aria-describedby="helpId" disabled pattern="(?=.[a-z])(?=.*[A-Z]).{5,}">
+                          <label for="">confirm password</label>
+                          <input type="password" name="ccpd" id="" class="form-control" value={{user.passsword}}placeholder="" aria-describedby="helpId"  disabled pattern="(?=.[a-z])(?=.*[A-Z]).{5,}">
+                          <div class="form-check" disabled>
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="cgender" id="" value="checkedValue" disabled >
+                              male
+                            </label><br>
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="cgender" id="" value="checkedValue" disabled>
+                                female
+                              </label>
+                          </div>
+                        
+                          <label for="">upload photo</label>
+                          <input type="file" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" disabled>
+                         
+                          <br>
+                          <button type="submit">Edit</button>
+                          
+                        </div>
+                    </form>
+    
+                </div>
+                <div class="col-sm-4">
+                    
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <footer class="fixed-bottom">
+            <div class="bg-dark text-white text-center">
+                <p>copy Rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

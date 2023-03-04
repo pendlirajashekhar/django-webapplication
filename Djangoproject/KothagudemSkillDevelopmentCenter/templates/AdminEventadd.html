@@ -1,0 +1,188 @@
+{% load static %}
+<html>
+    <head><title> Event add</title>
+        <link rel="stylesheet" herf="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href =" {% static 'css/bootstrap.min.css' %}"> </head>
+    <body>
+<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Kothagudem skill devlopment center</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'adminhome' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+    </div>
+</nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h1 class="display-3">Event add</h1>
+                
+            </div>
+        </div>
+        <div class="container fluid">
+            <div class="row">
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4">
+                    <form action= "{% url 'AdminEventadd' %} method="post">
+                    <div class="form-group">
+                        {% csrf_token %}
+                      <label for="">Event Name</label>
+                      <input type="text" name="Ename" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                      <label for="">Trainer Name</label>
+                 <input type="text" name="tname" id="" class="form-control" placeholder="" aria-describedby="helpId"><label for=""></label>
+                 <label for="">Requirment</label>
+                 <textarea name="require" id="" class="form-control" placeholder="" aria-describedby="helpId"></textarea>
+                 <label for="">Message</label>
+                 <textarea name="chat" id="" class="form-control" placeholder="" aria-describedby="helpId"></textarea>
+                 <label for="">EVent Date</label>
+                 <input type="datetime-local" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"><label for=""></label>
+                 <label for="">Location</label>
+                 <textarea name="location" id="" class="form-control" placeholder="" aria-describedby="helpId"></textarea><br>
+                 <button type="submit">Submit</button>
+                </div>
+            </form>
+                </div><br>
+
+                <div class="col-sm-4"></div>
+            </div>
+        </div><br>
+   
+       <div class="container text-center">
+        <h1>event add</h1>
+       </div>
+       <table class=" table table-striped table-warning table-hover">
+        <tr>
+            <th>S/NO</th>
+            <th>Event Id</th>
+            <th>Event Name</th>
+            <th>Trainer Name</th>
+            <th>Requirement</th>
+            <th>Message</th>
+            <th>Event Date</th>
+            <th>Event Location</th>
+            <th>Open</th>
+            <th>close</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a1" id="" value="checkedValue" checked>
+                Open
+              </label>
+            </div></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a1" id="" value="checkedValue" checked>
+                Close
+              </label>
+            </div></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a5" id="" value="checkedValue" checked>
+                Open
+              </label>
+            </div></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a5" id="" value="checkedValue" checked>
+                Close
+              </label>
+            </div></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a2" id="" value="checkedValue" checked>
+                Open
+              </label>
+            </div></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a2" id="" value="checkedValue" checked>
+                Close
+              </label>
+            </div></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a3" id="" value="checkedValue" checked>
+                Open
+              </label>
+            </div></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a3" id="" value="checkedValue" checked>
+                Close
+              </label>
+            </div></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a4" id="" value="checkedValue" checked>
+                Open
+              </label>
+            </div></td>
+            <td><div class="form-check">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="a4" id="" value="checkedValue" checked>
+                Close
+              </label>
+            </div></td>
+        </tr>
+       </table>
+
+        <footer class="fixed-bottom">
+            <div class="bg-dark text-white text-center">
+                <p>copy Rights issued by K.Nishith Reddy @2022 all rights reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
