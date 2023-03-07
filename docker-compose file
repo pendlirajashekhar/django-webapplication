@@ -1,0 +1,27 @@
+version:"3.9"
+services:
+  web:
+    image: ksdc:latest
+    ports:
+      - "8000:8000"
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DATABASE_URL=postgres://WEBAPP:17041999@postgres/djangoec2
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=WEBAPP
+      - POSTGRES_PASSWORD=170419999
+      - POSTGRES_DB=djangoec2
+
+volumes:
+  postgres-data:
