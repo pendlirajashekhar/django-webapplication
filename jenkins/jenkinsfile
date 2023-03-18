@@ -22,7 +22,7 @@ pipeline{
         }
         stage('Deploy Application'){
             steps{
-                sh 'cp -r /root/.jenkins/workspace/ksdc-webapplication/target/ksdc-webapplication-1.0.jar /opt/apache-tomcat-9.0.72/webapps/'
+                sh 'cp -r /root/.jenkins/workspace/django-webapplication/target/django-webapplication-1.0.jar /opt/apache-tomcat-9.0.72/webapps/'
             }
         }
     } 
